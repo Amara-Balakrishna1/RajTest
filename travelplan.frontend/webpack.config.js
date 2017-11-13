@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { resolve, join } = require('path');
+
+const chooseLoader = loader => (loader);
 const plugins = [];
 module.exports = {
   entry: './src/index',
@@ -11,7 +13,11 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             use: ['babel-loader', 'eslint-loader']
-        }
+        },
+        {
+          test: /(\.css)$/,
+          use: chooseLoader(ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }))
+        },
     ]
   },        
   output: {
@@ -26,6 +32,10 @@ module.exports = {
             configFile: resolve(__dirname, '.eslintrc')
           }
         }
-      })
+      }),
+      new ExtractTextPlugin({
+        filename: 'bundle.css',
+        disable: false
+      }),
     ]),
 }
