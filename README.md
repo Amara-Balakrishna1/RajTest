@@ -22,3 +22,11 @@ for ui :-
  nodejs
  
  database:- sql
+How to run.
+clone the repository.
+cd TravelPlan-ui
+npm start.
+cd TravelPlan-webservice
+node webService
+
+chrome localhost:8080
