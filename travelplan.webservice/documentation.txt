@@ -1,0 +1,38 @@
+completed
+
+for admin
+
+getallusers-->/getallusers ==> returns all users info
+adduser--->/adduser-->addsuser--->post-----------------signup->/adduser
+getuserinfo-->/getuser/userid/:id---> returns all personal information about user
+deleteuser--->deleteuser/userid/:id--> accepts id and makes it hide-->delete
+
+
+for user
+
+login->isuser
+gettripsinfo-->/getTrips/userid/:id---> returns all Trips information about user
+gettripinfo-->/gettripinfo/userid/:id/tripid/:id---> returns all days and each day expenses and allocated budget
+getdayinfo-->/gettripinfo/userid/:id/tripid/:id/day/:day---> returns all day information and each day expens by catageory and 
+
+
+
+
+for admin
+
+edituser--->edituser--> accepts id and updates its info-->put
+
+
+
+foruser
+
+addtrip--->/addTrip-->post
+removetrip--->/removeTrip/tripid/:id-->delete
+edit trip-->/edit-->edit trip details-->put
+
+addexpenses--only on event
+
+addeventexpense--->/addeventexpense-->post
+removeeventexpense--->/removeeventexpense/eventexpenseid/:id-->delete
+edit eventexpense-->/edit-->edit eventexpense details-->put
+
