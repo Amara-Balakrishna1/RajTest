@@ -3,21 +3,11 @@
 import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import {
-  combineForms
-} from 'react-redux-form';
 import promise from 'redux-promise-middleware';
-
-const initialUserState = {
-  firstName: '',
-  lastName: '',
-  age:''
-};
+import reducers from '../reducers';
 
 const middelware = applyMiddleware(promise(), thunk, createLogger());
-const store = createStore(combineForms({
-  user: initialUserState
-}), middelware);
+const store = createStore(reducers, middelware);
 
 
 export default store;

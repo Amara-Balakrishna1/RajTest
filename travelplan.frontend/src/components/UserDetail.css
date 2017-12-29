@@ -1,0 +1,24 @@
+.UserDetail-flex {
+	 display: flex;
+     flex-direction: column;
+}
+.Title{
+ height: 10%;
+ background-color: #446CB3;
+ color: white;
+ text-align: center; 	
+}
+.subTitle{
+ height: 50px;
+ background-color: #6685bb;
+ color: white;
+}
+
+.UserInfo{
+ height: 35%;
+}
+
+.TripsInfo{
+ display: flex;
+ flex: 15;
+}

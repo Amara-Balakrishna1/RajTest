@@ -1,0 +1,29 @@
+.signup{
+display: flex;
+flex-direction: column;
+flex: 15; 
+width: 100%; 
+background-color: #eee;
+padding: 10px;
+}
+.signup>div{
+	width: 100%;
+	padding: 5px;
+}
+.signup>div label{
+	width: 50%;
+	display: inline-block;
+}
+.signup>div>div{
+	width: 50%;
+	display: inline-block;
+}
+.signup input:focus{
+	border-color: #eee;
+	outline: none;
+}
+.signup input[type=text],.signup input[type=email],.signup select{
+	border: 1px solid #b1bfcc;
+    height: 30px;
+    width: 80%;
+}

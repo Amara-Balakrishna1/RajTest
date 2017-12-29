@@ -1,0 +1,28 @@
+.signin>div {
+	width: 30%;
+	display: inline-block;
+}
+
+.signin button{
+	background: none;
+    width: 100px;
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    border: 1px solid #ced0d4;
+    background-color: #4267b2;
+    border-color: #29487d;
+}
+
+.signin input:focus{
+	border-color: #eee;
+	outline: none;
+}
+
+.signin input{
+	color: black;
+}
+.adminCheck {
+	width: 10% !important;
+	display: inline-block;
+}
